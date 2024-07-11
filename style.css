@@ -1,0 +1,14 @@
+img{
+    height: 200px; 
+    width: 200px;
+    margin-right: 100px;
+}
+button{
+    margin-left: 50px;
+    margin-top: 5px; 
+    background-color: #f5bcf3; 
+    color: white; 
+    border-radius: 8px;
+} 
+
+

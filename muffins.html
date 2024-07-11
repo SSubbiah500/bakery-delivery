@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
+        <title>Our Muffins</title>
+        
+         <link rel="stylesheet" href="style.css">
+         
+         <style>
+            .content{
+                margin: auto;
+                max-width: 900px;
+            }
+         </style>
+        
+    </head>
+    <body>
+        <div class = "content">
+        <br>
+        <br>
+        <table border="0">
+            <tr>
+                <td>
+                    <th>Chocolate Chip Muffin</th>
+                </td>
+                <td>
+                    <th>Blueberry Breeze Muffin</th>
+                </td>
+                <td>
+                    <th>Banana mixed-nut Muffin</th>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <th><img src="images/chocolatechipmuffin.jpeg" height="100px" width="100px"></th>
+                </td>
+                <td>
+                    <th><img src="images/blueberry.jpeg" height="100px" width="100px"></th>
+                </td>
+                <td>
+                    <th><img src="images/bananamuffin.jpeg"></th>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <th><button id="muffin1" onclick="orderChocolate()">Order now</button></th>
+                </td>
+                <td>
+                    <th><button id="muffin2" onclick="orderBlueberry()">Order now</button></th>
+                </td>
+                <td>
+                    <th><button id="muffin3" onclick="orderBanana()">Order Now</button></th>
+                </td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            <table>
+            <tr>
+                <td>
+                    <th>Lemon Poppyseed Muffin</th>
+                </td>
+                <td>
+                    <th>Cornbread crumbly Muffin</th>
+                </td>
+                <td>
+                    <th>Bran superfood Muffin</th>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <th><img src="/images/detail_bb_Lemon_Poppyseed_Muffins_4-0002_2022.jpg"></th>
+                </td>
+                <td>
+                    <th><img src="/images/cornbread.jpeg"></th>
+                </td>
+                <td>
+                    <th><img src="/images/branmuffin.jpeg"></th>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <th><button id="muffin4" onclick="orderLemon()">Order Now</button></th>
+                </td>
+                <td>
+                    <th><button id="muffin5" onclick="orderCornbread()">Order Now</button></th>
+                </td>
+                <td>
+                    <th><button id="muffin6" onclick="orderBran()">Order Now</button></th>
+                </td>
+            </tr>
+        </table>
+        <p id="ordered"></p> 
+        <script>
+            //add an empty array to keep track of ordered items
+            const orderedItems = []; 
+
+            function orderChocolate() 
+            {
+                document.getElementById("muffin1").innerHTML = "Added"; 
+                orderedItems.push("Chocolate Chip Muffin");
+                document.getElementById("ordered").innerHTML = orderedItems;
+
+            }
+            function orderBlueberry() 
+            {
+                document.getElementById("muffin2").innerHTML = "Added"; 
+                orderedItems.push("Blueberry Muffin");
+                document.getElementById("ordered").innerHTML = orderedItems;
+            }
+            function orderBanana() 
+            {
+                document.getElementById("muffin3").innerHTML = "Added"; 
+                orderedItems.push("Banana Nut Muffin"); 
+                document.getElementById("ordered").innerHTML = orderedItems; 
+            }
+            function orderLemon() 
+            {
+                document.getElementById("muffin4").innerHTML = "Added"; 
+                orderedItems.push("Lemon Poppyseed Muffin"); 
+                document.getElementById("ordered").innerHTML = orderedItems;
+            }
+            function orderCornbread()
+            {
+                document.getElementById("muffin5").innerHTML = "Added"; 
+                orderedItems.push("Cornbread Muffin"); 
+                document.getElementById("ordered").innerHTML = orderedItems;
+            }
+            function orderBran() 
+            {
+                document.getElementById("muffin6").innerHTML = "Added"; 
+                orderedItems.push("Bran Muffin"); 
+                document.getElementById("ordered").innerHTML = orderedItems;
+            }
+            
+            
+
+            //add code for muffins 
+            const muffins = {
+                muffinFlavors : {
+                    flavor1: "chocolate chip",
+                    flavor2: "blueberry", 
+                    flavor3: "banana nut", 
+                    flavor4: "lemon poppyseed", 
+                    flavor5: "cornbread", 
+                    flavor6: "bran"
+                }
+                
+            }; 
+
+        </script>
+        <p id="ordered"></p>
+        </div>
+    </body>
+    <br>
+    <br>
+    <br>
+    <nav class="navbar fixed-bottom navbar-light bg-light active">
+        <button><a href="index.html">Home</a></button>
+        <button><a href="muffins.html">Muffins</a></button>
+        <button><a href="breads.html">Breads</a></button>
+        <button><a href ='cakes.html'>Cakes</a></button>
+      </nav> 
+
+</html>
